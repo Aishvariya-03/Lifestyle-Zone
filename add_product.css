@@ -1,0 +1,67 @@
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+    font-family: 'Spartan',sans-serif;
+    font-size: 20px;
+}
+#container p{
+    color: rgb(26, 52, 26);
+    font-size: 25px;
+    font-weight: 700;
+}
+#container .popup{
+    background-color: rgb(152, 188, 152);
+    color: black;
+    border-radius: 5px;
+    width: 700px;
+    height: auto;
+}
+#container .popup input,select{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left:5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: rgb(26, 52, 26);
+    width: 90%;
+    text-align: left;
+}
+#container .popup label{
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: rgb(26, 52, 26);
+    width: 90%;
+    text-align: left;
+    margin-top: 100px;
+}
+#container .popup button{
+    background-color: azure;
+    color: rgb(26, 52, 26);
+    margin-top: 10px;
+    border: none;
+    padding: 10px;
+    font-weight: 770;
+    font-size: 20px;
+}
+#container .popup button:hover{
+    background-color: rgb(19, 19, 44);
+    color: azure;
+}
+#container .popup a{
+    text-decoration: none;
+    color:  rgb(26, 52, 26);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#container .popup a:hover{
+    text-decoration: underline;
+    color:  rgb(26, 52, 26);
+    font-size: 20px;
+    font-weight: 770;
+
+}

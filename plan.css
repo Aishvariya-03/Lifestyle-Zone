@@ -1,0 +1,193 @@
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan',sans-serif;
+}
+body {
+    background-image: url("plan img.jfif");
+    height: 90vh;
+    width: auto;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: azure;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#header img{
+    height: 30%;
+    width: 30%;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: rgb(41, 82, 59);
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(41, 82, 59);
+    position: absolute;
+    bottom: -4px;
+    left: 20px ;
+}
+#mobile{
+    display: none;
+    align-items: center;
+}
+#close{
+    display: none;
+}
+
+/*home page*/
+#hero{
+    background-image: url("Herbalife.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 10px;
+}
+#hero h4{
+    padding-bottom: 5px;
+}
+#hero h1{
+    color: #357872;
+}
+#hero i{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 100px;
+}
+#hero button{
+    color: azure;
+    border: 0;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+@media(max-width:799px){
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: rgb(144, 182, 188);
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        padding-top: 80px; 
+        transition: 0.3s;
+    }
+    #navbar.active{
+        right: 0px;
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close{
+        position: absolute;
+        top: 50px;
+        left: 30px;
+        color: #1a1a1a;
+        font-size: 16px;
+        display: initial;
+    }
+    #lg-bag{
+        display: none;
+    }
+}
+
+.container {
+    background-color: azure;
+    padding: 20px;
+    margin: 100px 100px 100px 400px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin:20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid rgb(109, 109, 109);
+    outline: none;
+}
+
+button.add-pro{
+    width: 150px;
+    padding: 10px;
+    margin:10px 10px 10px 220px;
+    border-radius: 5px;
+    background-color: grey;
+    color: rgb(52, 50, 50);
+    font-size: 18px;
+    font-weight: 750;
+    border: none;
+}
+
+button:hover {
+    background-color: #23385e;
+    color: azure;
+}

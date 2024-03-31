@@ -1,0 +1,13 @@
+.container-fluid{
+    background-color: rgb(192, 235, 235);
+}
+.container-fluid img{
+    width: 100px;
+    height: 100px;
+}
+.input-group button{
+    background-color: rgb(195, 198, 198);
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+}

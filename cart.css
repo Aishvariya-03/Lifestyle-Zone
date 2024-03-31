@@ -1,0 +1,53 @@
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Spartan',sans-serif;
+}
+/* Define styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Define styles for table header */
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Define styles for table rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Define styles for table cells */
+td {
+    padding: 8px;
+}
+
+/* Define styles for the shopping cart title */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Define styles for the empty cart message */
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+input{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 50px 50px 600px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(175, 193, 208);
+    font-size: 20px;
+    font-weight: 550;
+    font-family: 'Spartan',sans-serif;
+}

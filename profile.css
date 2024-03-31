@@ -1,0 +1,156 @@
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+body {
+    font-family: 'Spartan',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: azure;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#header img{
+    height: 30%;
+    width: 30%;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: rgb(41, 82, 59);
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(17, 44, 29);
+    position: absolute;
+    bottom: -4px;
+    left: 20px ;
+}
+#mobile{
+    display: none;
+    align-items: center;
+}
+#close{
+    display: none;
+}
+
+.update-profile {
+    width: 500px;
+    margin: 10px auto;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color:darkseagreen;
+}
+
+.pro-container {
+    margin-bottom: 20px;
+    font-weight: 700px;
+}
+
+.pro-container span {
+    display: block;
+    margin-bottom: 5px;
+    color:rgb(33, 60, 45);
+    font-size: 20px;
+}
+
+.pro-container input[type="text"],
+.pro-container input[type="number"],
+.pro-container input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-weight: 700px;
+    font-size: 16px;
+    outline: none;
+}
+
+.pro-container input[type="submit"]{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: seagreen;
+    color: azure;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.pro-container input[type="submit"]:hover {
+    background-color: #3CB371; /* Change to a slightly different shade of green on hover */
+}
+
+.delete-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: seagreen;
+    color: azure;
+    cursor: pointer;
+    text-decoration: none;
+}
+.delete-btn:hover{
+    background-color: rgb(20, 67, 41);
+}
+
+.delete-btn {
+    margin-left: 10px;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 600px) {
+    #navbar {
+        display: none;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile #bar {
+        display: block;
+    }
+
+    #close {
+        display: block;
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+}

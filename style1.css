@@ -1,0 +1,578 @@
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan',sans-serif;
+}
+h1{
+    font-size: 50px;
+    color: #222;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+h4{
+    font-size: 20px;
+    color: #222;
+}
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-p1 h2,.section-p1 p{
+    padding: 10px 600px;
+    text-align: center;
+}
+.section-m1{
+    margin: 40px 0;
+}
+body{
+    width: 100%;
+}
+/*header*/
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: azure;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#header img{
+    height: 30%;
+    width: 30%;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: rgb(41, 82, 59);
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(41, 82, 59);
+    position: absolute;
+    bottom: -4px;
+    left: 20px ;
+}
+#mobile{
+    display: none;
+    align-items: center;
+}
+#close{
+    display: none;
+}
+
+/*home page*/
+#hero{
+    background-image: url("Herbalife.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 10px;
+}
+#hero h4{
+    padding-bottom: 5px;
+}
+#hero h1{
+    color: #357872;
+}
+#hero i{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 100px;
+}
+#hero button{
+    background-color: seagreen ;
+    color: azure;
+    border: 0;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+@media(max-width:799px){
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: rgb(144, 182, 188);
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        padding-top: 80px; 
+        transition: 0.3s;
+    }
+    #navbar.active{
+        right: 0px;
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close{
+        position: absolute;
+        top: 50px;
+        left: 30px;
+        color: #1a1a1a;
+        font-size: 16px;
+        display: initial;
+    }
+    #lg-bag{
+        display: none;
+    }
+}
+
+footer{
+    display: flex;
+    flex-wrap: left;
+    justify-content: space-between;
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 200px;
+    margin-left: 50px;
+}
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+footer h6{
+    font-size: 13px;
+    margin: 0 0 10px 0;
+}
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+footer .follow{
+    margin-top: 20px;
+}
+footer .follow i{
+    color: rgb(32, 60, 44);
+    padding-right: 4px;
+    cursor: pointer;
+}
+footer .follow i:hover,
+footer a:hover{
+    color: #088178;
+}
+footer .install .row img{
+    border: 1px solid darkseagreen;
+    border-radius: 15px;
+    padding: 5px 5px 5px 5px ;
+    height: 30%;
+    width: 30%;
+}
+
+
+/*product page*/
+#page-header{
+    background-image: url('healthy_header.jpg');
+    margin-top: 10px;
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 14px;
+}
+#product1{
+    text-align: center;
+}
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 10px;
+    border: 1px solid rgb(105, 105, 144);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 30px 30px 30px rgba(13, 11, 11, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+#product1 .pro:hover{
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.792);
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 10%;
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: rgb(21, 32, 21);
+    font-size: 12px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    font-size: 14px;
+    color: seagreen;
+}
+#product1 .pro .des h6{
+    padding-top: 7px;
+    font-size: 14px;
+    color: seagreen;
+}
+#product1 .pro .des i{
+    font-size: 14px;
+    color: rgb(243, 181, 25);
+}
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 900;
+    color: seagreen;
+}
+#product1 .pro .cart{
+    font-size: 14px;
+    color: rgb(18, 50, 32);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #b2d4b8;
+    font-weight: 530;
+    border: 1px solid seagreen;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+/* Style for the product1 section */
+#product1 {
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-bottom: 20px; /* Light gray background color */
+  }
+  
+  /* Style for the navigation list */
+  #product1 .navbar-nav {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Style for the navigation items */
+  #product1 .nav-item {
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  /* Style for the navigation links */
+  #product1 .nav-link {
+    text-decoration: none;
+    color: #333; /* Default color */
+  }
+  
+  /* Style for the navigation links on hover */
+  #product1 .nav-link:hover {
+    color: #007bff; /* Blue color on hover */
+  }
+  
+/*add products page*/
+#container .popup{
+    width: 500px;
+    height: 600px;
+    background-color: darkseagreen;
+    border-radius: 10px;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 550;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 450px;
+}
+#container .popup input{
+    width:80%;
+    font-size: 16px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(29, 88, 54);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(29, 88, 54);
+    font-weight: 600;
+    margin: 10px 10px 10px 10px;
+}
+#container .popup button{
+    width: 100%;
+    font-size: 20px;
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background-color: azure;
+    columns: rgb(29, 88, 54);
+    font-weight: 600;
+    border-radius: 10px;
+}
+#container .popup a{
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 10px 10px 180px;
+}
+#container p{
+    top: 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(29, 88, 54);
+    margin: 50px 100px 0 600px;
+    justify-content: center;
+}
+
+/*login page*/
+button {
+    background-color: rgb(186, 234, 234);
+    color: seagreen;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    margin: 100px 0 100px 500px;
+    padding: 10px 10px 10px 10px;
+}
+
+/*user login page*/
+#user-container{
+    height: 400px;
+    width: 400px;
+    background-color: darkseagreen;
+    border-radius: 10px;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 550;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 100px 100px 450px;
+}
+#user-container .popup input{
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid seagreen;
+    margin: 5px 5px 5px 45px;
+    font-size: 20px;
+    font-weight: 550;
+}
+#user-container button{
+    width: 80%;
+    font-size: 20px;
+    margin: 5px 5px 5px 45px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background-color: azure;
+    columns: rgb(29, 88, 54);
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#user-container a{
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+#user-container p{
+    top: 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(29, 88, 54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*admin page*/
+#admin-container{
+    height: 300px;
+    width: 500px;
+    background-color: darkseagreen;
+    border-radius: 10px;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 550;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left:450px;
+    margin-top: 200px;
+}
+#admin-container .popup input{
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid seagreen;
+    margin: 5px 5px 5px 45px;
+    font-size: 20px;
+    font-weight: 550;
+}
+#admin-container .popup button{
+    width: 80%;
+    font-size: 20px;
+    margin: 5px 5px 5px 45px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background-color: azure;
+    columns: rgb(29, 88, 54);
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#admin-container p{
+    top: 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(29, 88, 54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*profile page*/
+#pro-container{
+    height: 200px;
+    width: 200px;
+    background-color: #088178;
+}
+
+/*Cart page*/
+.cart-container{
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+} 
+.root{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.sidebar{
+    width: 40%;
+    border-radius: 10px;
+    background-color: azure;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+/*admin home page*/
+#manage .row .admin_image .col-md-2{
+    width: 30%;
+    height: 30%;
+}
+/*cart */
+#page{
+    margin-top: 10px;
+    width: 100%;
+    height: 20vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 14px;
+}
+#product1 .container .total h4{
+    
+    color: #0f5854;
+    font-size: 25px;
+    font-weight: 700;
+}
+#product1 .container .total button.btn{
+    margin-left: 10px;
+    font-size: 20px;
+    background-color:#6aa6a2; 
+}
+#product1 .container .total button.btn:hover{
+    background-color: azure;
+}
+/*checkout*/
